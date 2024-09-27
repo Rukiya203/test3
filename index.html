@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            
+           
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+           
+           
+          
+        }
+        .fa-toggle-on{
+            font-size: 40px;
+
+            color: black;
+          }
+    
+        .fa-toggle-off{
+            display: none;
+            font-size: 40px;  
+            color: black;
+          }
+    
+        
+        header{
+            height: 70px;
+            
+        }
+        
+        .navlist{
+            display: flex;
+            margin-left: auto;
+          }
+          
+          .mission {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically to the center */
+            white-space: nowrap;
+          }
+          #logo {
+            width: 150px; /* Set the width of the logo */
+            height: 120px; /* Set the height of the logo */
+            margin-right: 10px; /* Apply right margin */
+          }
+          .mission h2 {
+            color: #fff; /* Set text color to white */
+            font-size: 30px; /* Set font size */
+            margin-left: 140px;
+            
+        }
+        
+        @keyframes animate2 {
+            0% {
+                transform: translateX(0);
+                opacity: 0; /* Start at the original position with zero opacity */
+            }
+            50% {
+                transform: translateX(50px); /* Move 50px diagonally */
+                opacity: 1; /* Full opacity at midpoint */
+            }
+            100% {
+                transform: translateX(0); /* Return to the original position */
+                opacity: 1; /* Ensure final opacity is 1 */
+            }
+        }
+          .navigationBar {
+           
+            /* height: 150px; Set the height of the navigation bar */
+            display: flex; 
+            align-items: center; /* Align items vertically to the center */
+            justify-content: space-between; /* Distribute space between items */
+            /* padding: 0 20px; Apply horizontal padding */
+            font-weight: bold; /* Set font weight to bold */
+            font-size: 20px; /* Set font size */
+            height: 90px;
+            background-color: green;
+            margin-top: -10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000000;
+            border: 1px solid black;
+          
+           
+            
+           
+            
+           
+            
+            
+           
+           
+          }
+        
+          
+          
+          nav a {
+            color: #FFF; /* Set text color to black */
+            text-decoration: none; /* Remove text underline */
+            margin-left: 20px; /* Apply left margin */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Apply transition effect */
+          }
+          
+          nav a:hover {
+            color: #007BFF; /* Change text color on hover */
+          }
+          
+          
+        
+        
+          .gg{
+            margin-right: 90px;
+          }
+          
+          
+          
+          
+          .navlist a{
+            color: white;
+            margin-left: 65px;
+            font-size: 20px;
+            font-weight: 700;
+            border-bottom: 3px solid transparent;
+            transition: all .55s ease;
+          }
+          
+          .navlist a:hover{
+            border-bottom: 3px solid white;
+          }
+          
+          .navlist a.active {
+            border-bottom: 3px solid #56E161;
+            color: #56E161;
+            
+          } 
+        
+          .head {
+           
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 700px;
+            margin-top: -20px;
+            display: flex;
+            flex-direction: row;
+            background-color: #1f242d;
+        }
+        
+        
+        .name {
+            margin-top: 4px;
+            font-size: 4.5rem;
+            color: #FFF;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.6s ease-in-out;
+        }
+        
+        .name.active {
+            opacity: 1; /* Visible when active */
+            animation: animateName 1.7s ease-in-out forwards;
+        }
+        
+        @keyframes animateName {
+            0% {
+                transform: translateX(0);
+                opacity: 0; /* Start at the original position with zero opacity */
+            }
+            50% {
+                transform: translateX(50px); /* Move 50px diagonally */
+                opacity: 1; /* Full opacity at midpoint */
+            }
+            100% {
+                transform: translateX(0); /* Return to the original position */
+                opacity: 1; /* Ensure final opacity is 1 */
+            }
+        }
+        .name2{
+            font-size: 2.6rem;
+            color: #FFF;
+            opacity: 0; /* Start hidden */
+            transition: opacity 2s ease-in-out;
+            
+        }
+        .name2.active {
+            opacity: 1; /* Visible when active */
+            animation: animateName2 0.9s ease-in-out forwards;
+        }
+        @keyframes  animateName2 {
+            0% {
+                transform: translateY(0);  /* Start at the original position */
+                opacity: 0; /* Start at the original position with zero opacity */
+            }
+            50% {
+                transform: translateY(50px);  /* Move 50px diagonally */
+                opacity: 1; /* Full opacity at midpoint */
+            }
+            100% {
+                transform: translateY(0) ; /* Return to the original position */
+                opacity: 1; /* Ensure final opacity is 1 */
+            }
+        }
+        
+        
+        
+        
+        
+        .text_box {
+           
+            padding: 20px;
+            font-size: 2rem;
+            flex: 1;
+            margin-left: 120px;
+            margin-top: -130px;
+            transform: translateY(150px); /* Fixed the typo */
+            opacity: 0;
+            transition: all 2s ease;
+        }
+        
+        .text_box.active {
+            animation: animate2 1s ease-in-out forwards; /* Apply the animation */
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        
+        .wrapper {
+            width: 400px;
+            overflow: hidden;
+            line-height: 70px;
+        
+        }
+        
+        .name3{
+            margin-top: 20px;
+            font-size: 1.15rem;
+            color: #FFF;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.6s ease-in-out;
+        }
+        
+        .name3.active{
+            opacity: 1; /* Visible when active */
+            animation: animateName5 2s ease-in-out forwards;
+        
+        }
+        
+        @keyframes  animateName5 {
+            0% {
+                transform: translateX(0);  /* Start at the original position */
+                opacity: 0; /* Start at the original position with zero opacity */
+            }
+            50% {
+                transform: translateX(-50px);  /* Move 50px diagonally */
+                opacity: 1; /* Full opacity at midpoint */
+            }
+            100% {
+                transform: translateX(0) ; /* Return to the original position */
+                opacity: 1; /* Ensure final opacity is 1 */
+            }
+        }
+        .fa-youtube,.fa-linkedin, .fa-facebook,.fa-medium {
+            border-radius: 50%;
+            background-color: transparent;
+            width: 40px;
+            height: 30px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px; /* Adjust size here */
+            padding-top: 10px; /* Add padding to push content down */
+            border: 2px solid aqua; /* Set border width, style, and color */
+            color: aqua; /* Change the icon color */
+           
+        }
+        
+        .fa-youtube:hover,.fa-linkedin:hover,.fa-facebook:hover,.fa-medium:hover {
+            background-color: aqua; /* Background color change on hover */
+            color: black;
+            box-shadow: 0 0 10px 1px aqua; /* Glow effect */
+            
+        }
+        
+        
+        
+        
+        
+        
+        .wrapper .text {
+            position: relative;
+            color: #4070F4;
+            font-size: 35px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        
+        .wrapper .first-text {
+            color: #fff;
+            font-size: 2.6rem;
+            /* -bg-color: #1f242d; */
+            
+        }
+        .wrapper .sec-text {
+            
+            font-size: 2.5rem;
+            
+            
+        }
+        
+        .sec-text:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color:  #1f242d;
+            border-left: 8px solid #4070F4;
+            animation: animate 4s steps(12) infinite;
+        
+            
+        }
+        
+        
+        @keyframes animate {
+        
+            40%,  60%{
+                left: calc(100% + 4px);
+        
+            }
+            100%{
+                left: 0%;
+            }
+        
+        }
+        
+        
+        
+        .image_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            margin-left: -40px;
+            animation: hoveranimation2 2.7s ease-in-out infinite;
+            margin-top: -80px;
+            transform: translateY(150px); /* Fixed the typo */
+            opacity: 0;
+            transition: all 2s ease;
+        }
+        .image_container.active {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        
+        .image_container2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            margin-top: -80px;
+            opacity: 0;
+           /* margin-left: 250px; */
+           margin-left: 170px;
+           transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+        
+           
+        }
+        
+        .image_container2.active{
+            
+                opacity: 1;
+                animation: hoveranimation29 1.9s ease-in-out;
+                transition: transform 2s ease-in-out; /* Optional: for smooth transform without keyframes */
+            }
+        
+        
+        @keyframes hoveranimation2 {
+            0%, 100% { 
+                transform: translateY(0px); 
+                
+            }
+            50% { 
+                transform: translateY(20px); 
+            }
+        }
+        
+        @keyframes hoveranimation29 {
+            0% { 
+                transform: translateX(-50px);
+                opacity: 1;
+            }
+           
+        }
+        
+        
+        @keyframes hoveranimation90 {
+            0%, 100% { 
+                transform: translateY(0px); 
+            }
+            50% { 
+                transform: translateY(20px); 
+            }
+        }
+        
+        
+        
+        
+        
+          
+        
+        img.image {
+            width: 400px; /* Adjust image width */
+            height: 400px; /* Adjust image height */
+            border-radius: 50%; /* Make the image circular */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border: 8px solid #fff; /* White border around the image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+        
+        .text2 {
+            font-size: 1.6rem;
+        }
+        .head4{
+           
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 700px;
+            display: flex;
+            flex-direction: row;
+            margin: 80px auto;
+            background-color:  #323946;
+            overflow: hidden;
+            margin-top: -80px;
+        
+          
+        
+        
+        }
+        
+        .head5{
+           
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 800px;
+            display: flex;
+            flex-direction: row;
+            margin: 80px auto;
+            background-color:  #1f242d;
+            overflow: hidden;
+            margin-top: -80px;
+        
+          
+        
+        
+        }
+        
+        .text1{
+            margin-top: 60px;
+        }
+        
+        .head4 .text_box{
+            margin-top: - 50px;
+        }
+        .head2{
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 750px;
+          
+            display: flex;
+            flex-direction: row;
+            margin: 80px auto;
+            background-color:  #323946;
+            margin-top: -120px;
+            overflow: hidden;
+        
+        
+        }
+        
+        .head3{
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 720px;
+           
+            display: flex;
+            flex-direction: row;
+            margin: 80px auto;
+           
+            margin-top: -120px;
+            overflow: hidden;
+             background-color:  #1f242d;
+             
+        
+        }
+        
+        
+        .middle_text {
+            color: white;
+            font-size: 1.2rem;
+            opacity: 0; /* Start hidden */
+            transition: transform 1.2s ease-in-out; /* Optional: for smooth transform without keyframes */
+        }
+        
+        .ff{
+           
+            font-size: 3.2rem;
+            color: whitesmoke;
+            font-weight: 800;
+        }
+        .f2{
+          
+            font-size: 3.0rem;
+            color: aqua;
+            margin-left: 20px;
+            background-color: transparent;
+            font-weight: 800;
+        }
+        
+        
+        .ff5{
+            font-size: 3.0rem;
+            color: whitesmoke;
+           margin-left: -50px;
+           font-weight: 760;
+        
+        }
+        .f27{
+            font-size: 3.2rem;
+            color: aqua;
+            margin-left: 20px;
+            background-color: transparent;
+            font-weight: 760;
+        
+        }
+        
+        .fff{
+            display: flex;
+            opacity: 0; /* Start hidden */
+            transition: transform 1.2s ease-in-out; /* Optional: for smooth transform without keyframes */
+        
+        }
+        
+        
+        .lol{
+            display: flex;
+            opacity: 0; /* Start hidden */
+            transition: transform 1.2s ease-in-out; /* Optional: for smooth transform without keyframes */
+          
+        
+        }
+        
+        .lol.active,.fff.active{
+            animation: animateyoung 1.1s ease-in-out forwards; /* Trigger animation on active */
+        
+        }
+        
+        
+        
+        
+        @keyframes animateyoung {
+            0% {
+                transform: translate(80px, -80px); /* Start from a position 80px to the right and 80px up */
+                opacity: 0; /* Start with zero opacity */
+            }
+           
+            100% {
+                transform: translate(0, 0); /* End at the original position */
+                opacity: 1; /* Ensure final opacity is 1 */
+            }
+        }
+        
+        
+        .sec3{
+           margin-left: 50px;
+            width: 800px;
+            height: 800px;
+        
+        }
+        .boxes {
+            display: flex;
+            list-style-type: none;
+            margin-left: -260px;
+            margin-top: -140px;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out; /* Smooth transition for opacity */
+            will-change: transform, opacity;
+        }
+        
+        .boxes.active {
+            opacity: 1;
+            animation: boxanimate 1.7s ease-in-out; /* Trigger the animation when active */
+        }
+        
+        @keyframes boxanimate {
+            0% {
+                transform: translateY(60px); /* Start from above the original position */
+                opacity: 0; /* Start fully transparent */
+            }
+           
+            100% {
+                transform: translateY(0); /* End at the original position */
+                opacity: 1; /* Fully opaque */
+            }
+        }
+        
+        
+        .boxes2{
+            display: flex;
+            list-style-type: none;
+           margin-left: -323px;
+           margin-top: -150px;
+           
+          
+           
+         
+        
+           
+           
+        }
+        .gg a.active {
+            background-color: #007bff; /* Background color when active */
+            color: #fff; /* Text color when active */
+            border-radius: 5px;
+        }
+        
+        .job1dis{
+            margin-left: 20px;
+            font-size: 1.1rem;
+            color: whitesmoke;
+            
+            
+        
+        }
+        ::selection{
+            color: aqua;
+        }
+        
+        .texts{
+            margin-top: -90px;
+        }
+        
+        .bracket{
+            margin-top: 10px;
+            margin-left: 30px;
+            
+            
+        }
+        .curly-bracket{
+           color: aqua;
+           font-size: 60px;
+           font-weight: 500;
+          
+        }
+        
+        .box1,.box2,.box3{
+        
+            margin-top: 200px;
+            margin-left: 20px;
+            width: 400px;
+            height: 300px;
+            background:#323946;
+            border: 2px solid aqua;
+           
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+            position: relative;
+            display: inline-block;
+            box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.7); /* Glow effect */
+        
+        }
+        
+        
+        .box11,.box22,.box33{
+        
+            margin-top: 200px;
+            margin-left: 20px;
+            width: 390px;
+            height: 230px;
+           
+           
+            border-radius: 30px;
+            transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+            position: relative;
+            display: inline-block;
+            overflow: hidden; /* Ensures the image doesn't overflow outside the box */
+        
+        }
+        
+        .image_text {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 900;
+            margin-top: -20px;
+        }
+        
+        .image_text56{
+            text-align: center;
+            font-size: 1.9rem;
+            font-weight: 900;
+            margin-top: -20px;
+        
+        }
+        
+        .image_text58{
+            text-align: center;
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-top: 10px;
+        }
+        .image_text2 {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .image_text57{
+            text-align: center;
+            font-size: 1.9rem;
+            font-weight: 900;
+            margin-top: 0px;
+        
+        }
+        
+        .image_text3 {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 900;
+            margin-top: 0px;
+        }
+        
+        
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            color: #f1f1f1;
+            width: 100%;
+         
+            opacity: 0;
+            background: linear-gradient(to top, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0.4), rgba(0, 255, 255, 0));
+        
+           
+            transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+        }
+            
+           
+        
+        .overlay:hover{
+            opacity: 1;
+        }
+        
+        .pic1{
+            width: 390px;
+            height: 230px;
+            border-radius: 30px;
+            transition: transform 0.5s  ease-in-out;
+           
+        }
+        .job1{
+            margin-top: 110px;
+           margin-left: 20px;
+           font-size: 1.5rem;
+           color: whitesmoke;
+           font-weight: 900;
+        }
+        
+        
+        
+        .im78{
+           
+            margin-top: 120px;
+            margin-left: 310px;
+          
+        }
+        
+        
+        .im83{
+           
+           
+            margin-top: 120px;
+            margin-left: 20px;
+        }
+        
+        .im79{
+          
+          
+            margin-top: 190px;
+            margin-left: -370px;
+           
+          
+           
+        }
+        
+        .im80{
+        
+           
+           
+           
+            margin-top: 190px;
+          margin-left: -769px;  
+        
+          
+           
+        }
+        
+        .text1{
+            background-color: #323946;
+            width: 350px;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid  aqua;
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7); /* Glow effect */
+            padding-left: 20px; /* Adjust padding to move placeholder */
+        
+        
+        }
+        
+        
+        .text1::placeholder{
+           
+            font-size: 1.1rem;
+           
+        }
+        .text9{
+            background-color: #323946;
+            width: 360px;
+            height: 50px;
+            border-radius: 8px;
+            margin-left: -160px;
+         
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7); /* Glow effect */
+            padding-left: 20px; /* Adjust padding to move placeholder */
+            border: 2px solid  aqua;
+          
+           
+        
+        }
+        .im81{
+            
+           
+          
+            margin-top: 320px;
+            margin-left: -769px;
+        
+          
+           
+        }
+        
+        .lolo{
+            width: 190px;
+            height: 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            background-color: aqua;
+            border: 2px solid aqua;
+            box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.7); /* Glow effect */
+         
+        
+        }
+        
+        .but1{
+            margin-top: 30px;
+            margin-left: 270px;
+           
+        }
+        
+        .text78{
+            background-color: #323946;
+            width: 745px;
+            height: 300px;
+            border-radius: 12px;
+            border: 1px solid  #323946; /* Corrected border */
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7); /* Glow effect */
+            padding-left: 20px; /* Adjust padding to move placeholder */
+            border: 2px solid  aqua;
+            
+           
+            
+           
+          
+          
+        
+        }
+        
+        .text78::placeholder{
+            position: absolute;
+           
+           
+            font-size: 1.4rem;
+            opacity: 0.7;
+            margin-top: -120px;
+            
+          
+          
+           
+           
+          
+        
+          
+        }
+        
+        
+        
+        .box11:hover,.box22:hover,.box33:hover{
+            border: 2px solid aqua;
+        
+           
+        }
+        
+        .box1:hover{
+        
+            transform: scale(1.07);
+            border: 2px solid aqua;
+          
+        
+           
+            
+        
+        
+        
+        
+        
+        }
+        
+        .box2:hover{
+            transform: scale(1.04);
+            border: 2px solid aqua;
+          
+        
+            
+           
+            
+           
+        
+        }
+        
+        .box3:hover{
+            transform: scale(1.04);
+            border: 2px solid aqua;
+          
+        
+        }
+        
+        
+        
+        
+        .roo{
+            display: inline-block;
+            
+        }
+        
+        .roo2{
+        
+            margin-top: 120px;
+            
+            margin-left: 220px;
+            
+        }
+        .fff{
+            font-size: 2.0rem;
+            color: whitesmoke;
+        }
+        
+        .middle_text.active {
+            animation: animateold 1.7s ease-in-out forwards; /* Trigger animation on active */
+        }
+        
+        @keyframes animateold {
+            0% {
+                transform: translateX(80px);
+                opacity: 0; /* Start at the original position with zero opacity */
+            }
+            50% {
+                transform: translateX(0); /* Return to the original position */
+                opacity: 1; /* Full opacity at midpoint */
+            }
+            100% {
+                transform: translateX(0); /* Stay at the original position */
+                opacity: 1; /* Ensure final opacity is 1 */
+            }
+        }
+        
+        .te{
+            margin-left: 100px;
+            width: 900px;
+            margin-top: -100px;
+        }
+        
+        .text3{
+            text-align: left;
+            font-size: 1.5rem;
+            color: whitesmoke;
+        }
+        
+        
+        /* @keyframes  hoveranimation {
+            from {transform: translateY(0);}
+            to {transform: translateY(-20px);}
+            
+          } */
+        
+          .head:hover,.head2:hover,.head3:hover,.head4:hover{
+            animation: hoveranimation 0.8s ease forwards infinite;
+          }
+        .button{
+          width: 190px;
+          height: 50px;
+          background-color: aqua;
+          border-radius: 20px;
+          
+          
+        
+        
+        }
+        
+        .button:hover{
+            color: blue;
+        }
+        
+        footer{
+            margin-top: -90px;
+        }
+        
+        
+        
+        .footer-content {
+            background-color: #323946;;
+            text-align: center;
+            padding: 20px;
+           
+            bottom: 0;
+            width: 97.3%;
+            border-top: 1px solid #e4e4e4;
+        }
+        
+        .fot{
+            color: #FFF;
+        }
+
+
+       
+        
+        
+        
+        
+       
+        
+
+
+
+
+        .cover{
+            position: relative;
+            width: 90%;
+            height: 50%;
+          
+
+
+        }
+
+        .cover::before{
+           
+            content: "";
+            left: 0;
+            top: 0;
+            z-index: 99;
+            height: 100%;
+            width: 150px;
+           
+           
+
+
+        }
+
+        .cover::after{
+          
+            content: "";
+            right: 0;
+            top: 0;
+            z-index: 99;
+            height: 100%;
+            width: 150px;
+
+            width: 1518.8px;
+
+          
+
+
+
+        }
+
+        
+
+        .scroll-images{
+            width: 100%;
+
+            
+
+            
+          
+            height: auto;
+            display: flex;
+
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            scroll-behavior: auto;
+            margin-top: -216px;
+           
+            
+           
+          
+            
+
+
+        }
+
+        .child{
+            width: 100%; /* Adjusted to match the image size with some padding */
+            height: 450px;
+          
+            
+            cursor: pointer;
+           
+           
+            
+           
+          
+           
+           
+
+
+
+
+
+        }
+
+        .scroll-images::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+        
+
+        .child-img{
+           width: 500px;
+           height: 500px;
+          
+          
+          
+
+
+        }
+        .icon{
+            color: green;
+            font-size: 23px;
+            outline: none;
+            border: none;
+            padding: 0px 20px;
+            cursor: pointer;
+        }
+
+        .bar{
+            background-color: #007BFF;
+            display: flex;
+            height: 120px;
+            position: relative;
+        }
+
+        ul{
+            margin-top: 30px;
+            list-style-type: none;
+           display: flex;
+           gap: 160px;
+           background-color: #56E161;
+          margin-left: 170px;
+          position: absolute;
+          height: 70px;
+          
+        }
+
+        li{
+            white-space: nowrap;
+        }
+
+        .gif{
+            margin-left: 170px;
+          
+        }
+
+       
+        .i1{
+            width: 400px;
+            height: 300px;
+            
+           
+        }
+
+        .all{
+            display:flex;
+            gap: 40px;
+            white-space: nowrap;
+            margin-left: -60px;
+            
+            
+            flex-wrap: wrap;
+          
+        }
+
+        .alls{
+            width: 92.7%;
+            margin-top: 70px;
+            display:flex;
+            gap: 40px;
+           
+           
+            position: absolute;
+            margin-left: 110px;
+            
+            
+            flex-wrap: wrap;
+          
+
+        }
+
+
+       
+
+        li{
+            line-height: 1.8rem;
+        }
+        .c2{
+            background-color: #4070F4;
+
+            width: 100%;
+            height: 700px;
+           
+          
+          
+            display: flex;
+            position: relative;
+           
+            overflow: hidden;
+          
+           
+          
+            
+            
+        }
+
+        .t4{
+           
+            width: 300px;
+            height: 300px;
+          
+        }
+
+        .t2{
+            margin-left: 160px;
+        }
+
+        .im1{
+            position: relative;
+           
+            background-color: red;
+
+        }
+        .cap{
+            width: 100%;
+            position: absolute;
+           
+            background-color: green;
+
+        }
+
+        @media (max-width:768px){
+
+           
+            .scroll-images2{
+                position: relative;
+                margin-left: -583px;
+            }
+
+            
+            .gif{
+                
+                
+                margin-left: 100px;
+            }
+
+           
+
+            .df{
+                position: relative;
+                background-color: #56E161;
+               left: -320px;
+             
+              
+             
+              
+            }
+            .dfg{
+                position: relative;
+                background-color: #56E161;
+               left: -760px;
+
+            }
+
+        
+            
+            
+
+
+        }
+
+        @media (max-width:820px){
+
+           
+            .scroll-images2{
+                position: relative;
+                margin-left: -599px;
+            }
+
+            
+            .gif{
+                
+                
+                margin-left: 100px;
+            }
+
+           
+
+            .df{
+                position: relative;
+                background-color: #56E161;
+               left: -320px;
+             
+              
+             
+              
+            }
+            .dfg{
+                position: relative;
+                background-color: #56E161;
+               left: -760px;
+
+            }
+            
+            
+
+
+        }
+
+        @media (max-width:1024px){
+
+           
+            .scroll-images2{
+                position: relative;
+                margin-left: -608px;
+            }
+
+            
+            .gif{
+                
+                
+                margin-left: 100px;
+                width: 300px;
+            }
+
+           
+
+            .df{
+                position: relative;
+                background-color: #56E161;
+               left: -320px;
+             
+              
+             
+              
+            }
+            .dfg{
+                position: relative;
+                background-color: #56E161;
+               left: -760px;
+
+            }
+            
+            
+
+
+        }
+
+        @media (max-width:304px){
+
+          
+
+            .slide{
+                width: 500px;
+            }
+
+
+            .c2{
+                width: 1000px;
+            }
+
+           
+            .scroll-images2{
+                position: relative;
+                margin-left: -608px;
+                width: 600px;
+            }
+
+            
+            .gif{
+                
+                
+                margin-left: 100px;
+                width: 300px;
+            }
+
+           
+
+            .df{
+                position: relative;
+                background-color: #56E161;
+               left: -320px;
+             
+              
+             
+              
+            }
+            .dfg{
+                position: relative;
+                background-color: #56E161;
+               left: -760px;
+
+            }
+            
+            
+
+
+        }
+
+        .main-sroll-div2{
+            width: 85%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           margin-left: 50px;
+            margin-top: -80px;
+            background-color: #56E161;
+           
+           
+
+        }
+
+
+       
+
+        .main-sroll-div2{
+            width: 85%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           margin-left: 50px;
+            margin-top: -80px;
+            background-color: #56E161;
+           
+           
+
+        }
+       
+
+       
+
+
+
+        .cover2{
+            position: relative;
+            width: 90%;
+            height: 50%;
+          
+
+
+        }
+
+        .cover2::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            z-index: 99;
+            height: 100%;
+            width: 150px;
+           
+           
+
+
+        }
+
+        .cover2::after{
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            z-index: 99;
+            height: 100%;
+            width: 150px;
+          
+
+
+
+        }
+
+        .df{
+
+
+            position: absolute;
+           
+           
+           
+            margin-top: 250px;
+            margin-left: 350px;
+            z-index: 1000;
+           
+           
+            
+           
+           
+           
+        
+           
+           
+           
+        }
+
+        h2{
+            color: whitesmoke;
+        }
+        .dfg{
+
+
+            position: absolute;
+           
+           
+           
+            margin-top: 250px;
+            margin-left: 1160px;
+            z-index: 1000;
+           
+           
+           
+           
+        
+           
+           
+           
+        }
+
+        .scroll-images2{
+            width: 930px;
+            height: auto;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            scroll-behavior: auto;
+          
+          
+            
+
+
+        }
+
+        .child2{
+            min-width: 290px; /* Adjusted to match the image size with some padding */
+            height: 450px;
+            margin: 0px 10px;
+            cursor: pointer;
+         
+            overflow: hidden;
+           
+           
+
+
+
+
+
+        }
+
+        .scroll-images2::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        
+
+        .child-img2{
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+
+
+        }
+        .icon2{
+            color: green;
+            font-size: 23px;
+            outline: none;
+            border: none;
+            padding: 0px 20px;
+            cursor: pointer;
+           
+        }
+
+        .custom-img {
+            width: 2500px; /* Set your desired width */
+            height: 500px; /* Maintain aspect ratio */
+          
+        }
+        .carousel-caption{
+           
+            animation: lolla 2s ease-in-out forwards;
+        }
+        
+        @keyframes lolla {
+            0%{
+                opacity: 0;
+                transform: translateY(0); /* start at the original position */
+            }
+        
+          
+        
+            100%{
+                opacity: 1;
+                transform: translateY(50px); /* fully down */
+            }
+        }
+
+        .carousel-captions{
+           
+            position: fixed;
+        
+            
+        }
+
+        .ll{
+           
+
+           position: absolute;
+           top: 24px;
+           right: 20px;
+        }
+
+        @keyframes fadeout {
+            0%{
+                opacity: 1;
+            }
+
+            100%{
+                transform: translateY(-180px);
+                opacity: 0;
+            }
+        }
+
+       
+        .box56{
+        
+          
+            z-index: 10000;
+            background-color: #56E161;
+            position: absolute;
+            right: 280px;
+            bottom: 60px;
+            width: 500px;
+            height: 200px;
+            display: none;
+            transition: opacity 0.5s ease;
+
+           
+          
+          
+
+        }
+        .buty{
+            position: absolute;
+        }
+
+       
+        
+        
+
+      
+
+
+
+
+       
+        
+
+
+    
+ </style>
+</head>
+<body>
+
+    <header >
+        <div class="navigationBar">
+            <div class="mission">
+              
+                <h2>Portafolio</h2>
+            </div>
+            <nav class="gg">
+                <a href="#head56"> Home </a>
+                <a href="#head23"> About </a>
+                <a href="#head32"> Services </a>
+                <a href="account.html"> Portfolio </a>
+                <a href="#head53"> Contact </a>
+                <div class="ll">
+                <i class="fa-solid fa-toggle-on"></i>
+                <i class="fa-solid fa-toggle-off"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+   
+        <!-- <div class="df">
+            <button class="icon" onclick="scrolli()"><i class="fas fa-angle-double-left"></i>
+            </button>
+        </div> -->
+       
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="cctv (1).jpg" class="d-block w-100 custom-img" alt="...">
+                        <div class="carousel-caption top-0 ">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="cctv (1).jpg" class="d-block w-100 custom-img" alt="...">
+                        <div class="carousel-caption top-0 ">
+                          <h5>Second slide label</h5>
+                          <p>Some representative placeholder content for the second slide.</p>
+                          <button>hiiiiii</button>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="cctv (1).jpg" class="d-block w-100 custom-img" alt="...">
+                        <div class="carousel-caption top-0 ">
+                          <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                    <br>
+                   
+
+
+
+                  </div>
+                
+            
+           
+           
+            
+
+
+           
+      
+
+        
+       
+
+
+        <!-- <div class="bar">
+            <ul>
+                <li>Recommended by 99% of<br> customers</li>
+                <li>Proudly serving customers<br> in Sri Lanka over 20 years</li>
+                <li>Island wide Guaranteed <br> Delivery</li>
+                <li>A huge selection of best<br> products</li>
+            </ul>
+
+        </div> -->
+        <br>
+        <br>
+
+
+        <div class="gif">
+            <h2>Deals and Latest From Hikvision Solution</h2>
+            <br>
+            <br>
+            <div class="all">
+            <div class="im1">
+                <img src="im1.gif" class="i1" alt="lol">
+
+            </div>
+            <div class="im1">
+                <img src="im1.gif" class="i1" alt="lol">
+
+            </div>
+            <div class="im1">
+                <img src="im1.gif" class="i1" alt="lol">
+
+            </div>
+            </div>
+          
+        </div>
+
+        
+      
+        
+        <br>
+        <br>
+
+
+
+        <div class="c2">
+            <div class="t2">
+                <h2>Best Deals</h2>
+            </div>
+
+            
+         
+
+                
+            <div class="df">
+                <button class="icon" onclick="scroll1()"><i class="fas fa-angle-double-left"></i>
+                </button>
+            </div>
+               
+                    <div class="scroll-images2">
+
+                        
+                       
+                        
+                            
+                       
+                        
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images">
+                       
+                        
+
+                           
+                       
+                    </div>
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images" loading="lazy"></div>
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images"  loading="lazy"> </div>
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images"  loading="lazy"></div>
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images"  loading="lazy"  ></div>
+                     <div class="child2"> <img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images"   loading="lazy"         ></div>
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images"></div>
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images"></div>
+                     <div class="child2"><img class="child-img2" src="Hikvision-Turbo-HD-DVR-Sale-in-sri-lanka-best-price-300x300.jpg" alt="images"></div>
+                    </div>
+
+
+                    <div class="dfg">
+                        <button class="icon" onclick="scroll2()"><i class="fas fa-angle-double-right"></i>
+                        </button>
+                    </div>
+
+
+
+                    
+        
+                    <div class="box56">
+                        <h1>halo halo</h1>
+                    </div>
+
+                    <button class="buty">reveal</button>
+                    <br>
+                    <button class="butys">reveal</button>
+
+                   
+                </div>
+
+
+                <button></button>
+
+              
+
+
+                
+                
+               
+
+               
+              
+
+
+        
+           
+       
+
+    
+    
+</body>
+
+<script src="mainjs.js"></script>
+
+
+</html>
